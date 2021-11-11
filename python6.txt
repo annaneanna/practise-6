@@ -1,0 +1,50 @@
+1.
+ def nested_sum(t):
+    summa = 0
+    for i in t:
+        if isinstance(i, list):
+            summa += nested_sum(i)
+        else:
+            summa += i
+    return summa
+2.
+ def cumsum(t):
+    G = []
+    a=0
+    for i in t:
+        a+=int(i)
+        G.append(a)
+    return G 
+3.
+ def middle(t):
+    return t[1:-1]
+x=input().split()
+print(middle(x))
+
+4.
+def chop(t):
+    t[1:-1]
+x=input().split()
+print(chop(x))
+
+5.
+def Is_sorted(t):
+    return t==sorted(t)
+t=input().split()
+print(Is_sorted(t))
+
+6.
+ def is_anagram(word1, word2):
+    return sorted(word1)==sorted(word2)
+print(is_anagram("пила", "липа"))
+
+7.
+ def has_duplicates(s):
+    s=sorted(s)
+    t = False
+    for i in range(len(s)):
+        if s[i-1] == s[i]:
+            t = True
+    return t
+s=input().split()
+print(has_duplicates(s))
